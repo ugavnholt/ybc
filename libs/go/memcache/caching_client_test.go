@@ -2,7 +2,7 @@ package memcache
 
 import (
 	"bytes"
-	"github.com/valyala/ybc/bindings/go/ybc"
+	"github.com/ugavnholt/ybc/bindings/go/ybc"
 	"testing"
 	"time"
 )

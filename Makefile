@@ -47,11 +47,17 @@ ybc-32-release: $(YBC_SRCS)
 ybc-64-release: $(YBC_SRCS)
 	$(CC) -c $(YBC_SRCS) $(RELEASE_FLAGS) -m64 -o ybc-64-release.o
 
+ybc-64-arm-release: $(YBC_SRCS)
+	$(CC) -c $(YBC_SRCS) $(RELEASE_FLAGS) -march=armv8-a -o ybc-64-release.o
+
 ybc-32-debug: $(YBC_SRCS)
 	$(CC) -c $(YBC_SRCS) $(DEBUG_FLAGS) -m32 -o ybc-32-debug.o
 
 ybc-64-debug: $(YBC_SRCS)
 	$(CC) -c $(YBC_SRCS) $(DEBUG_FLAGS) -m64 -o ybc-64-debug.o
+
+ybc-64-arm-debug: $(YBC_SRCS)
+	$(CC) -c $(YBC_SRCS) $(RELEASE_FLAGS) -march=armv8-a -o ybc-64-debug.o
 
 libybc-debug: $(YBC_SRCS)
 	$(CC) $(YBC_SRCS) $(DEBUG_FLAGS) $(LIBYBC_FLAGS) -o libybc-debug.so

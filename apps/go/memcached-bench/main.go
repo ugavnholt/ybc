@@ -7,7 +7,7 @@ import (
 	"flag"
 	"fmt"
 	memcache_org "github.com/bradfitz/gomemcache/memcache"
-	memcache_new "github.com/valyala/ybc/libs/go/memcache"
+	memcache_new "github.com/ugavnholt/ybc/libs/go/memcache"
 	"github.com/vharitonsky/iniflags"
 	"log"
 	"math/rand"

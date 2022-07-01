@@ -3,7 +3,7 @@ package memcache
 import (
 	"bytes"
 	"fmt"
-	"github.com/valyala/ybc/bindings/go/ybc"
+	"github.com/ugavnholt/ybc/bindings/go/ybc"
 	"io"
 	"net"
 	"sync"

@@ -3,7 +3,7 @@ package memcache
 import (
 	"bufio"
 	"bytes"
-	"github.com/valyala/ybc/bindings/go/ybc"
+	"github.com/ugavnholt/ybc/bindings/go/ybc"
 	"io"
 	"log"
 	"strconv"

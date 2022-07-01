@@ -35,7 +35,7 @@ import (
 	"time"
 
 	"github.com/valyala/fasthttp"
-	"github.com/valyala/ybc/bindings/go/ybc"
+	"github.com/ugavnholt/ybc/bindings/go/ybc"
 	"github.com/vharitonsky/iniflags"
 )
 

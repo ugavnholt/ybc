@@ -4,7 +4,7 @@ import (
 	"bufio"
 	"bytes"
 	"encoding/binary"
-	"github.com/valyala/ybc/bindings/go/ybc"
+	"github.com/ugavnholt/ybc/bindings/go/ybc"
 	"log"
 	"net"
 	"sync"
