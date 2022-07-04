@@ -242,7 +242,7 @@ static void p_memory_sync(void *ptr, size_t size);
 
 
 #ifdef YBC_PLATFORM_LINUX
-  #include "platform/linux.c"
+  #include "linux.c"
 #else
   #error "unsupported platform"
 #endif
