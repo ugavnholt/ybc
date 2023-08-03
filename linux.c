@@ -18,7 +18,6 @@
 
 #include <assert.h>     /* assert */
 #include <errno.h>      /* errno */
-#include <error.h>      /* error */
 #include <fcntl.h>      /* open, posix_fadvise, fcntl */
 #include <pthread.h>    /* pthread_* */
 #include <stddef.h>     /* size_t */
@@ -33,11 +32,26 @@
 #include <unistd.h>     /* close, fstat, access, unlink, dup, fcntl, sysconf, read,
                          * lseek, read, write
                          */
+#include <stdarg.h>
 
 #ifndef O_CLOEXEC
   #define O_CLOEXEC 0
 #endif
 
+
+void
+error (int status, int errnum, const char *message, ...)
+{
+  va_list ap;
+  va_start (ap, message);
+  fprintf(stderr, "%i", errnum);
+  vfprintf (stderr, message, ap);
+  fprintf(stderr, "\n");
+  va_end (ap);
+  fflush (stderr);
+  if(status)
+    exit(status);
+}
 
 static void *p_malloc(const size_t size)
 {
