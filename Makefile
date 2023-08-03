@@ -17,7 +17,7 @@ YBC_SRCS = ybc.c
 TEST_SRCS = tests/functional.c
 PERFTEST_SRCS = tests/performance.c
 
-release: ybc-32-release ybc-64-release libybc-release ybc-64-arm-release
+release: ybc-32-release ybc-64-release ybc-64-arm-release libybc-release ybc-64-arm-release
 
 debug: ybc-32-debug ybc-64-debug libybc-debug ybc-64-arm-debug
 
@@ -46,6 +46,9 @@ ybc-32-release: $(YBC_SRCS)
 
 ybc-64-release: $(YBC_SRCS)
 	$(CC) -c $(YBC_SRCS) $(RELEASE_FLAGS) -m64 -o ybc-64-release.o
+
+ybc-64-arm-release: $(YBC_SRCS)
+	$(CC) -c $(YBC_SRCS) $(RELEASE_FLAGS) -march=armv8.1-a+crc+crypto -o ybc-64-arm-release.o
 
 ybc-64-arm-release: $(YBC_SRCS)
 	$(CC) -c $(YBC_SRCS) $(RELEASE_FLAGS) -march=armv8-a -o ybc-64-arm-release.o
